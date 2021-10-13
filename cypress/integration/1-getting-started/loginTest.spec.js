@@ -11,6 +11,5 @@ describe('PC Login', () => {
     it('should access PC images tab', () => {
     
         cy.visit('photo/v2/?offset=0&limit=100&sort=-created_date&quality=75&maxHeight=300&operator=or')
-
     });
 })
