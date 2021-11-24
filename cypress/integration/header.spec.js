@@ -10,41 +10,39 @@ context('Header Tests', () => {
 
   it('should render layout, verify size toggle buttons', () => {
 
-    //  cy.visit('/photo/v2/?offset=0&limit=100&sort=-created_date&quality=75&maxHeight=300&operator=or');
+    cy.get('.image-tiles')
+      .should('exist');
 
-      cy.get('.rect-image-container')
-        .should('not.exist');
+    cy.wait(1000)
+    cy.get('[data-cy=layout-list-button]').click()
 
-      cy.wait(1000)
-      cy.get('[data-cy=layout-list-button]').click()
+    cy.get('.image-list')
+      .should('exist');
 
-      cy.get('.rect-image-container')
-        .should('exist');
+    cy.get('[data-cy=layout-grid-button]').click()
 
-      cy.get('[data-cy=layout-grid-button]').click()
+    cy.get('.image-tiles')
+      .should('exist');
+  });
 
-      cy.get('.rect-image-container')
-        .should('not.exist');
-    });
-
-  it('button click should toggle image card size', () => {
+  it.only('button click should toggle image card size', () => {
 
     // small
     cy.get('[data-cy=layout-small-button]').click();
 
-    cy.get('.image-tile').eq(1)
-      .should('have.class', 'small-image-tile');
+    cy.get('.image-tiles')
+      .should('have.class', 'small-tiles');
 
     // medium
     cy.get('[data-cy=layout-medium-button]').click();
 
-    cy.get('.image-tile').eq(10)
-      .should('have.class', 'medium-tile');
+    cy.get('.image-tiles')
+      .should('have.class', 'medium-tiles');
 
     // large
     cy.get('[data-cy=layout-large-button]').click();
 
-    cy.get('.image-tile').eq(20)
-      .should('have.class', 'large-tile');
+    cy.get('.image-tiles')
+      .should('have.class', 'large-tiles');
   });
 });

@@ -77,5 +77,5 @@ Cypress.Commands.add('loginToApplication', () => {
    , Cypress.env("username"), Cypress.env("password")
     )
     cy.contains('Home')
-    cy.contains('h4', 'Composer').click()
+    cy.contains('h4', 'Photo Center').click()
 })
