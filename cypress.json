@@ -1,3 +1,5 @@
 {
-    "baseUrl": "https://staging.arcpublishing.com/"
+    "baseUrl": "https://staging.arcpublishing.com/",
+    "viewportWidth": 1366,
+    "viewportHeight": 768
 }
