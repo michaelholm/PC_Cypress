@@ -38,7 +38,7 @@ describe('User hits create a Gallery to create a new Gallery', () => {
     .click()
     .wait(1000)
     .get('.right-container')
-    .should('have.css', 'width', Cypress.config('viewportWidth'));
+    .should('have.css', 'width', Cypress.config('viewportWidth')+'px');
   });
   
 });
