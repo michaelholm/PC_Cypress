@@ -9,7 +9,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^8.5.0"
+    "cypress": "^8.5.0",
+    "cypress-iframe": "^1.0.1"
   },
   "dependencies": {
     "puppeteer": "^10.4.0"

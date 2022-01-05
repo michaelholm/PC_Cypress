@@ -24,6 +24,8 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
+import 'cypress-iframe';
+
 Cypress.Commands.add(
     'loginAndVisit',
     (visitPath, userKey, password, options = { preserve: true }) => {

@@ -1,5 +1,7 @@
 {
     "baseUrl": "https://staging.arcpublishing.com/",
     "viewportWidth": 1366,
-    "viewportHeight": 768
+    "viewportHeight": 768,
+    "chromeWebSecurity": false,
+    "modifyObstructiveCode": false
 }
